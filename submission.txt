@@ -1,0 +1,37 @@
+== Petunjuk Menjalankan Proyek ETL Pipeline ==
+
+1. Cara Menjalankan Skrip ETL Pipeline
+---------------------------------------
+Jalankan skrip utama ETL pipeline sesuai tahapan berikut:
+
+- Install requirements:
+  > pip instal -r requirements.txt
+
+- Jalankan skrip ETL :
+
+ > python utils/extract.py
+
+ > python utils/transform.py
+
+ > python utils/load.py 
+
+Catatan: Pastikan file konfigurasi (seperti kredensial Google Sheets, URL database, dsb) telah disiapkan dan berada pada jalur yang benar.
+
+
+2. Cara Menjalankan Unit Test
+------------------------------
+Untuk menjalankan seluruh unit test, gunakan perintah berikut dari direktori root proyek:
+
+> pytest tests/
+
+Jika ingin menjalankan test tertentu (misal):
+> pytest tests/test_extract.py
+
+
+3. Cara Menjalankan Test Coverage
+----------------------------------
+Untuk menghitung dan menampilkan coverage dari folder `utils`, jalankan:
+
+> pytest --cov=utils --cov-report=term-missing tests/
+
+Hasilnya akan menampilkan presentase cakupan kode (coverage) dan baris mana saja yang belum diuji.
