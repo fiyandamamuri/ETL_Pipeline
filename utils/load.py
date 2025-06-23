@@ -113,11 +113,11 @@ if __name__ == "__main__":
         print(df.head())
 
         # Load ke PostgreSQL
-        DB_URL = "postgresql://fiyan:winarnipaimin@localhost:5432/datasets_fashion"
+        DB_URL = "postgresql://xxx:xxx@localhost:5432/datasets_fashion" #cek detail di notes
         load_to_postgres(df, DB_URL)
 
         # Upload ke Google Sheets
-        SPREADSHEET_ID = "1FQi2FBtradlhahlk8DOcj4t6dwTn3KaKfQ5KDlqX7oY"
+        SPREADSHEET_ID = "xxx" #cek detail di notes
         load_to_gsheet(df, SPREADSHEET_ID)
     except Exception as e:
         print(f"❌ Program gagal dijalankan: {e}")
